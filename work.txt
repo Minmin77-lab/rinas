@@ -32,3 +32,20 @@ GET https://leidcyitkqhhthnlkrdr.supabase.co/rest/v1/mark?score=gt.2&select=*
         "score": 4
     }
 ]
+
+CREATE VIEW teacher_work_count2 AS
+SELECT work.teacher_id, COUNT(mark.id) AS work_count
+FROM work 
+JOIN mark ON work.id = mark.id_work
+GROUP BY work.teacher_id;
+GET https://leidcyitkqhhthnlkrdr.supabase.co/rest/v1/teacher_work_count2?work_count=gt.0&select=*
+[
+    {
+        "teacher_id": 3,
+        "work_count": 1
+    },
+    {
+        "teacher_id": 1,
+        "work_count": 2
+    }
+]
