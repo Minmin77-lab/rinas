@@ -17,3 +17,18 @@ POST https://leidcyitkqhhthnlkrdr.supabase.co/rest/v1/user
     "name": "Носков Константин",
     "group": "ИС 23/9-1"
 }
+GET https://leidcyitkqhhthnlkrdr.supabase.co/rest/v1/mark?score=gt.2&select=*
+[
+    {
+        "id": 1,
+        "id_user": 1,
+        "id_work": 1,
+        "score": 3
+    },
+    {
+        "id": 2,
+        "id_user": 2,
+        "id_work": 2,
+        "score": 4
+    }
+]
