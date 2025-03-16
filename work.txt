@@ -1,0 +1,4 @@
+PATCH https://leidcyitkqhhthnlkrdr.supabase.co/rest/v1/mark?id=eq.2
+{
+    "score": "4"
+}
